@@ -8,8 +8,14 @@
     <packaging>maven-plugin</packaging>
 
     <name>TSDetect Plugin</name>
-
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
