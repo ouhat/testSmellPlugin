@@ -33,7 +33,7 @@ public class TSDetectMojo extends AbstractMojo {
 
             int exitCode = process.waitFor();
             if (exitCode != 0) {
-                throw new MojoExecutionException("Error al ejecutar tsDetect");
+                throw new MojoExecutionException("Error al ejecutar tsDetect, TsDetect path may be not setted!");
             }
         } catch (IOException | InterruptedException e) {
             throw new MojoExecutionException("Error al ejecutar tsDetect", e);
