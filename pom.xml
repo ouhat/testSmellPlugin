@@ -22,7 +22,7 @@
                 <artifactId>maven-plugin-plugin</artifactId>
                 <version>3.5</version>
                 <configuration>
-                    <goalPrefix>testsmells</goalPrefix>
+                    <goalPrefix>detect</goalPrefix>
                 </configuration>
             </plugin>
             <plugin>

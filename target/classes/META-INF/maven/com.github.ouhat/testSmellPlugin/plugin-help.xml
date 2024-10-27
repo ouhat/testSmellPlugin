@@ -8,7 +8,7 @@
   <groupId>com.github.ouhat</groupId>
   <artifactId>testSmellPlugin</artifactId>
   <version>1.0.0</version>
-  <goalPrefix>testsmells</goalPrefix>
+  <goalPrefix>detect</goalPrefix>
   <mojos>
     <mojo>
       <goal>detect</goal>
@@ -24,7 +24,18 @@
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>
       <threadSafe>false</threadSafe>
-      <parameters/>
+      <parameters>
+        <parameter>
+          <name>TsPath</name>
+          <type>java.lang.String</type>
+          <required>true</required>
+          <editable>true</editable>
+          <description></description>
+        </parameter>
+      </parameters>
+      <configuration>
+        <TsPath implementation="java.lang.String">${TsPath}</TsPath>
+      </configuration>
     </mojo>
   </mojos>
 </plugin>
