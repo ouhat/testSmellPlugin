@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.ouhat</groupId>
-    <artifactId>tsdetect-plugin</artifactId>
-    <version>v1.0.2</version>
+    <artifactId>testSmellPlugin</artifactId>
+    <version>1.0.0</version>
     <packaging>maven-plugin</packaging>
 
-    <name>TSDetect Plugin</name>
+    <name>Test Smells Detector Plugin</name>
     <repositories>
         <repository>
             <id>jitpack.io</id>
