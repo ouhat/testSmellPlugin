@@ -4,7 +4,7 @@
 
     <groupId>com.github.x</groupId>
     <artifactId>tsdetect-plugin</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <packaging>maven-plugin</packaging>
 
     <name>TSDetect Plugin</name>
