@@ -44,3 +44,4 @@ public class TSDetectMojo extends AbstractMojo {
         }
     }
 }
+//v1
