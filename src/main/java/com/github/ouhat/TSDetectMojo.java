@@ -15,16 +15,20 @@ public class TSDetectMojo extends AbstractMojo {
 
     @Parameter(property = "TsPath", required = true)
     public String TsPath;
+
+    @Parameter(property = "TestPath", defaultValue = "src/test/java")
+    public String TestPath;
+
     @Override
     public void execute() throws MojoExecutionException {
         getLog().info("Ejecutando tsDetect para identificar test smells...");
 
-
         try {
-            // Ajusta el comando según sea necesario, por ejemplo, con un .jar:
-            ProcessBuilder processBuilder = new ProcessBuilder("java", "-jar", TsPath, "-d", "src/test/java");
+            // Construye el comando con el path de los tests proporcionado por el usuario
+            ProcessBuilder processBuilder = new ProcessBuilder("java", "-jar", TsPath, "-d", TestPath);
             Process process = processBuilder.start();
 
+            // Lee la salida del proceso
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
             while ((line = reader.readLine()) != null) {
@@ -33,7 +37,7 @@ public class TSDetectMojo extends AbstractMojo {
 
             int exitCode = process.waitFor();
             if (exitCode != 0) {
-                throw new MojoExecutionException("Error al ejecutar tsDetect, TsDetect path may be not setted!");
+                throw new MojoExecutionException("Error al ejecutar tsDetect, verifica el TsPath y TestPath.");
             }
         } catch (IOException | InterruptedException e) {
             throw new MojoExecutionException("Error al ejecutar tsDetect", e);
