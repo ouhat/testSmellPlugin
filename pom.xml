@@ -4,7 +4,7 @@
 
     <groupId>com.github.ouhat</groupId>
     <artifactId>testSmellPlugin</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>maven-plugin</packaging>
 
     <name>Test Smells Detector Plugin</name>
